@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Book } from './model/book.interface';
+import { Book } from 'app/model/book.interface';
 
 @Component({
   selector: 'app-book',

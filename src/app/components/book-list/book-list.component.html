@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let book of booksService.getBooks()">
+  <li *ngFor="let book of books$ | async">
     <app-book [book]="book"></app-book>
   </li>
 </ul>
