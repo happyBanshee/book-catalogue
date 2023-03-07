@@ -4,9 +4,7 @@ import { Book } from 'app/model/book.interface';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 
 export class GetBooksService {
   private url = '../../assets/books.json';
