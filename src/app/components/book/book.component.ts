@@ -9,7 +9,4 @@ import type { Book } from '@models/book.interface';
 })
 export class BookComponent {
   @Input() book: Book;
-
-
-
 }

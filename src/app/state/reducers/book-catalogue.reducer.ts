@@ -1,16 +1,13 @@
 import { AddBookComponentActions, AddBookComponentEffectsActions } from "@components/add-book/state/actions";
+import { BookListComponentEffectsActions } from "@components/book-list/state/actions";
 import { createReducer, on } from "@ngrx/store";
 import type { CatalogueState } from "app/shared/model/catalogue-state.interface";
-import { BookListComponentEffectsActions } from "../components/book-list/state/actions";
 
 export const initialState: CatalogueState = {
     bookList: [],
     error: '',
     success: '',
     progress: false,
-    book: {
-        title: '', author: '', year: ''
-    }
 };
 
 export const bookCatalogueReducer = createReducer(initialState,

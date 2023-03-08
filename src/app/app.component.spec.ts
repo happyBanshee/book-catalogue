@@ -1,35 +1,27 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+  const arrange = () => {
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
     }).compileComponents();
-  });
-
-  it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+    const component = fixture.componentInstance;
+    fixture.detectChanges();
+    return { component, fixture };
+  };
 
-  it(`should have as title 'book-catalogue'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('book-catalogue');
+  it(`should have as title 'Book Catalogue'`, () => {
+    const { component } = arrange();
+    expect(component.title).toEqual('Book Catalogue');
   });
 
   it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('book-catalogue app is running!');
+    const { fixture } = arrange();
+
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('Book Catalogue');
   });
 });

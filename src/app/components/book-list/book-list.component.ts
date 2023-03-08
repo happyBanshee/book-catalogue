@@ -31,6 +31,5 @@ export class BookListComponent implements OnInit {
     this.books$ = this.store.select(BookListComponentSelectors.booksSelector);
     this.error$ = this.store.select(BookListComponentSelectors.errorSelector);
     this.success$ = this.store.select(BookListComponentSelectors.successSelector);
-
   }
 }
