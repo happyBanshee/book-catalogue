@@ -19,7 +19,6 @@ describe('BookListComponent', () => {
       providers: [
         MockComponent(BookComponent),
         provideMockStore({
-
         })
       ],
     })
