@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BookComponent } from '@components/book/book.component';
-import { FetchBooksService } from '@services/fetch-books.service';
 import { Observable } from 'rxjs';
-import type { Book } from 'app/model/book.interface';
 import { HttpClientModule } from '@angular/common/http';
 import { Store } from '@ngrx/store';
-import type { CatalogueState } from 'app/model/catalogue-state.interface';
-import { BookListComponentActions } from './state/actions';
-import { BookListComponentSelectors } from './state/selectors';
+import type { Book } from '@models/book.interface';
+import type { CatalogueState } from '@models/catalogue-state.interface';
+import { BookListComponentSelectors } from '@selectors/index';
 
 @Component({
   selector: 'app-book-list',
@@ -18,13 +16,13 @@ import { BookListComponentSelectors } from './state/selectors';
     CommonModule,
     HttpClientModule
   ],
-  providers: [FetchBooksService],
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css'],
 })
 export class BookListComponent implements OnInit {
   books$: Observable<Book[]>;
-  error$: Observable<string | undefined>;
+  error$: Observable<string>;
+  success$: Observable<string>;
 
   constructor(private store: Store<CatalogueState>) {
   }
@@ -32,6 +30,7 @@ export class BookListComponent implements OnInit {
   ngOnInit() {
     this.books$ = this.store.select(BookListComponentSelectors.booksSelector);
     this.error$ = this.store.select(BookListComponentSelectors.errorSelector);
-    this.store.dispatch(BookListComponentActions.fetchBooks());
+    this.success$ = this.store.select(BookListComponentSelectors.successSelector);
+
   }
 }

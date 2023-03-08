@@ -22,7 +22,8 @@
     "paths": {
       "@components/*": ["app/components/*"],
       "@services/*": ["app/services/*"],
-      "@models/*": ["app/models/*"]
+      "@models/*": ["app/shared/model/*"],
+      "@selectors/*": ["app/state/selectors/*"]
     }
   },
   "angularCompilerOptions": {

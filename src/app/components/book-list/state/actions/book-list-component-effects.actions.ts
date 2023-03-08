@@ -1,5 +1,5 @@
+import type { Book } from "@models/book.interface";
 import { createAction, props } from "@ngrx/store";
-import type { Book } from "app/model/book.interface";
 
 export enum BookListComponentEffectsActionTypes {
     FetchBooksSuccess = '[Book List Component Effects] Fetch Books Success',

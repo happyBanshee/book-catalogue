@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import type { Book } from 'app/model/book.interface';
+import type { Book } from '@models/book.interface';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
