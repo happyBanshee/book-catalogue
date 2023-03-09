@@ -6,7 +6,6 @@ describe('BookListSelectors', () => {
         bookList: [{ title: 'Book 1', author: 'Author 1', year: '2000' }],
         error: '',
         success: '',
-        progress: false
     };
 
     describe('booksSelector', () => {

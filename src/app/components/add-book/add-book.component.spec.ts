@@ -18,8 +18,7 @@ describe('AddBookComponent', () => {
       state: {
         bookList: [bookMock],
         success: '',
-        error: '',
-        progress: false
+        error: ''
       }
     };
 

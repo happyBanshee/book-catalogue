@@ -2,14 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
-## Thing to improve
+## Ways to improve the quality
 
-- improve validation rules for the fields and the form
-- use strict mode to improve code quality
-- setup pre-commit hooks for test coverage
+With the given time restrictions now everything was possible to implement. What could be done more:
+
+- extend validation rules for the fields and the form, regex could be changed to more simple check
+- use strict mode
+- setup pre-commit hooks for test coverage/linter/prettier
 - move errors/success messages for http requests and forms to the translation files instead of hardcoded strings in the code
 - add e2e tests
-- add unit tests for html
+- cover html files with unit tests
 - improve unit tests coverage for BookListComponentEffects
 - implement responsive design
 

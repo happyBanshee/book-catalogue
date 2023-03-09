@@ -4,5 +4,4 @@ export interface CatalogueState {
     bookList: Book[];
     success: string,
     error: string;
-    progress: boolean;
 }

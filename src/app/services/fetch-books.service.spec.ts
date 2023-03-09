@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Book } from '@models/book.interface';
+import type { Book } from '@models/book.interface';
 import { FetchBooksService } from './fetch-books.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 

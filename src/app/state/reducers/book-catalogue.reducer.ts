@@ -7,7 +7,6 @@ export const initialState: CatalogueState = {
     bookList: [],
     error: '',
     success: '',
-    progress: false,
 };
 
 export const bookCatalogueReducer = createReducer(initialState,
@@ -39,7 +38,6 @@ export const bookCatalogueReducer = createReducer(initialState,
                 ...state,
                 error: '',
                 success: '',
-                progress: true,
                 bookList: [...state.bookList, action.book]
             };
         }
@@ -50,7 +48,6 @@ export const bookCatalogueReducer = createReducer(initialState,
             ...state,
             error: action.error,
             success: '',
-            progress: false
         }
         )
     ),
@@ -59,7 +56,6 @@ export const bookCatalogueReducer = createReducer(initialState,
         AddBookComponentEffectsActions.addBookSuccess, (state, action) => ({
             ...state,
             error: '',
-            progress: false,
             success: action.success
         })),
 );

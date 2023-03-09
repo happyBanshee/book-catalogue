@@ -1,4 +1,4 @@
-import { Book } from '@models/book.interface';
+import type { Book } from '@models/book.interface';
 import { BookListComponentEffectsActions } from '.';
 
 describe('BookListComponentEffectsActions', () => {

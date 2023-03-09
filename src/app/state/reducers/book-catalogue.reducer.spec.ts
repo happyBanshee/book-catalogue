@@ -1,7 +1,7 @@
 import { AddBookComponentActions, AddBookComponentEffectsActions } from '@components/add-book/state/actions';
 import { BookListComponentEffectsActions } from '@components/book-list/state/actions';
-import { Book } from '@models/book.interface';
-import { CatalogueState } from 'app/shared/model/catalogue-state.interface';
+import type { Book } from '@models/book.interface';
+import type { CatalogueState } from 'app/shared/model/catalogue-state.interface';
 import { initialState, bookCatalogueReducer } from './book-catalogue.reducer';
 
 describe('bookCatalogueReducer', () => {
@@ -14,7 +14,6 @@ describe('bookCatalogueReducer', () => {
         };
         const initialState: CatalogueState = {
             bookList: [bookMock],
-            progress: false,
             success: '',
             error: ''
         };

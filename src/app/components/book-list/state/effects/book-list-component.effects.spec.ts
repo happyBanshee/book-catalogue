@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { FetchBooksService } from '@services/fetch-books.service';
 import { BookListComponentActions, } from '../actions';
 import { BookListComponentEffects } from './book-list-component.effects';
-import { Book } from '@models/book.interface';
+import type { Book } from '@models/book.interface';
 import { BookListComponentEffectsActionTypes } from '../actions/book-list-component-effects.actions';
 
 describe('BookListComponentEffects', () => {
