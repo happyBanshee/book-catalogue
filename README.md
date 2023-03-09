@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
+## Thing to improve
+
+- improve validation rules for the fields and the form
+- use strict mode to improve code quality
+- setup pre-commit hooks for test coverage
+- move errors/success messages for http requests and forms to the translation files instead of hardcoded strings in the code
+- add e2e tests
+- add unit tests for html
+- improve unit tests coverage for BookListComponentEffects
+- implement responsive design
+
+## Used libraries
+
+- mg-mocks to mock components
+- prettier/ eslint to help with code formatting and types
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

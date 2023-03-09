@@ -1,0 +1,37 @@
+[
+  {
+    "author": "Gustave Flaubert",
+    "title": "Sentimental Education",
+    "year": 1869
+  },
+  {
+    "author": "Gustave Flaubert",
+    "title": "Madame Bovary",
+    "year": 1857
+  },
+  {
+    "author": "Euripides",
+    "title": "Medea",
+    "year": -431
+  },
+  {
+    "author": "William Faulkner",
+    "title": "Absalom, Absalom!",
+    "year": 1936
+  },
+  {
+    "author": "Fyodor Dostoevsky",
+    "title": "The Brothers Karamazov",
+    "year": 1880
+  },
+  {
+    "author": "George Eliot",
+    "title": "Middlemarch",
+    "year": 1871
+  },
+  {
+    "author": "Henrik Ibsen",
+    "title": "A Doll's House",
+    "year": 1879
+  }
+]
