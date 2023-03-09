@@ -1,7 +1,9 @@
 <div *ngIf="error$ | async as error">{{ error }}</div>
 
-<ul *ngIf="books$ | async as books">
-  <li *ngFor="let book of books">
+<div class="container" *ngIf="books$ | async as books">
+  <div class="item" *ngFor="let book of books">
     <app-book [book]="book"></app-book>
-  </li>
-</ul>
+  </div>
+</div>
+
+<app-add-book></app-add-book>

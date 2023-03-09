@@ -1,0 +1,10 @@
+.alert-danger {
+  color: red;
+}
+.container {
+  padding: 20px 10px;
+}
+
+.field {
+  padding: 5px;
+}

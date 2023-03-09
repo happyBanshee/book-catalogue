@@ -7,12 +7,14 @@ import { Store } from '@ngrx/store';
 import type { Book } from '@models/book.interface';
 import type { CatalogueState } from '@models/catalogue-state.interface';
 import { BookListComponentSelectors } from '@selectors/index';
+import { AddBookComponent } from '@components/add-book/add-book.component';
 
 @Component({
   selector: 'app-book-list',
   standalone: true,
   imports: [
     BookComponent,
+    AddBookComponent,
     CommonModule,
     HttpClientModule
   ],

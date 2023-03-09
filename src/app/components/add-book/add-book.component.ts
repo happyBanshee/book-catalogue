@@ -35,6 +35,7 @@ export class AddBookComponent {
 
     const formValue: Book =
       this.form.getRawValue();
+    this.form.reset();
 
     this.store.dispatch(AddBookComponentActions.addBook({ book: formValue }));
   }

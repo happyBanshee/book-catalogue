@@ -6,6 +6,7 @@ import { BookListComponent } from './book-list.component';
 import { BookListComponentSelectors } from '@selectors/index';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { MockComponent } from 'ng-mocks';
+import { AddBookComponent } from '@components/add-book/add-book.component';
 
 describe('BookListComponent', () => {
   const arrange = () => {
@@ -18,6 +19,7 @@ describe('BookListComponent', () => {
       imports: [CommonModule, HttpClientModule,],
       providers: [
         MockComponent(BookComponent),
+        MockComponent(AddBookComponent),
         provideMockStore({
         })
       ],

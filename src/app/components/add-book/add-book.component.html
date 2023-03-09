@@ -1,48 +1,51 @@
-<form [formGroup]="form" (ngSubmit)="submit()">
-  <div>
-    <label for="author">Author: </label>
-    <input id="author" type="text" formControlName="author" />
-    <div
-      *ngIf="author.invalid && (author.dirty || author.touched)"
-      class="alert alert-danger"
-    >
-      <div *ngIf="author.errors?.['required']">Author is required.</div>
-      <div *ngIf="author.errors?.['onlyLetters']">
-        Author name must contain only letters.
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field">
+      <label for="title">Title: </label>
+      <input id="title" type="text" formControlName="title" />
+      <div
+        *ngIf="title.invalid && (title.dirty || title.touched)"
+        class="alert alert-danger"
+      >
+        <div *ngIf="title.errors?.['required']">Title is required.</div>
+        <div *ngIf="title.errors?.['onlyLetters']">
+          Title must contain only letters.
+        </div>
       </div>
     </div>
-  </div>
-  <div>
-    <label for="title">Title: </label>
-    <input id="title" type="text" formControlName="title" />
-    <div
-      *ngIf="title.invalid && (title.dirty || title.touched)"
-      class="alert alert-danger"
-    >
-      <div *ngIf="title.errors?.['required']">Title is required.</div>
-      <div *ngIf="title.errors?.['onlyLetters']">
-        Title must contain only letters.
+
+    <div class="field">
+      <label for="author">Author: </label>
+      <input id="author" type="text" formControlName="author" />
+      <div
+        *ngIf="author.invalid && (author.dirty || author.touched)"
+        class="alert alert-danger"
+      >
+        <div *ngIf="author.errors?.['required']">Author is required.</div>
+        <div *ngIf="author.errors?.['onlyLetters']">
+          Author name must contain only letters.
+        </div>
       </div>
     </div>
-  </div>
 
-  <div>
-    <label for="year">Published year: </label>
-    <input id="year" type="text" formControlName="year" />
+    <div class="field">
+      <label for="year">Published year: </label>
+      <input id="year" type="text" formControlName="year" />
 
-    <div
-      *ngIf="year.invalid && (year.dirty || year.touched)"
-      class="alert alert-danger"
-    >
-      <div *ngIf="year.errors?.['required']">Published year is required.</div>
-      <div *ngIf="year.errors?.['fourDigits']">
-        Published year must contain 4 digits.
-      </div>
-      <div *ngIf="year.errors?.['yearInPast']">
-        Published year must be date in the past.
+      <div
+        *ngIf="year.invalid && (year.dirty || year.touched)"
+        class="alert alert-danger"
+      >
+        <div *ngIf="year.errors?.['required']">Published year is required.</div>
+        <div *ngIf="year.errors?.['fourDigits']">
+          Published year must contain 4 digits.
+        </div>
+        <div *ngIf="year.errors?.['yearInPast']">
+          Published year must be date in the past.
+        </div>
       </div>
     </div>
-  </div>
 
-  <button type="submit">Add book</button>
-</form>
+    <button type="submit" [disabled]="!form.valid">Add book</button>
+  </form>
+</div>
