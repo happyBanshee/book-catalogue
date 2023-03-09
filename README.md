@@ -4,13 +4,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Thing to improve
 
-- improve validation rules for the form
+- improve validation rules for the fields and the form
 - use strict mode to improve code quality
 - setup pre-commit hooks for test coverage
 - move errors/success messages for http requests and forms to the translation files instead of hardcoded strings in the code
 - add e2e tests
 - add unit tests for html
-- improve unit tests coverage for BookListComponentEffects.
+- improve unit tests coverage for BookListComponentEffects
+- implement responsive design
 
 ## Used libraries
 
